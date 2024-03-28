@@ -1,0 +1,22 @@
+.summary {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 25px 0 25px 40px;
+  margin-bottom: 50px;
+}
+
+.summary__header {
+  margin-bottom: 20px;
+}
+
+.summary__list {
+  padding: 0 0 30px 0;
+}
+
+.summary__element::before {
+  content: '—';
+}
+
+.summary__element:not(:last-child) {
+  margin-bottom: 10px;
+}

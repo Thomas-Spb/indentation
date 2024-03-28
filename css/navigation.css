@@ -1,0 +1,25 @@
+.navigation {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 25px 0 25px 40px;
+  margin-bottom: 50px;
+}
+
+.navigation__title {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.navigation__list {
+  padding-left: 20px;
+  color: #02535f;
+}
+
+.navigation__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.navigation__link {
+  color: #02535f;
+  text-decoration: none;
+  border-bottom: 1px black solid;
+}
