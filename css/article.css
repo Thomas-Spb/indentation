@@ -25,12 +25,12 @@
   font-weight: 900;
 }
 
-.article__desc {
+.article__desc:not(:last-child) {
   margin-bottom: 30px;
 }
 
 .article__desc_last {
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 .article__desc_nomargin {
   margin-bottom: 0;
@@ -53,7 +53,7 @@
   max-width: 560px;
 }
 
-.article__image_small {
+.article__image_size_small {
   max-width: 480px;
 }
 
@@ -66,7 +66,21 @@
   vertical-align: top;
   max-width: 480px;
 }
-.article__inner_more {
+.article__image_size_big {
   margin-right: 35px;
   max-width: 560px;
+}
+.article__figure {
+  margin-bottom: 45px;
+}
+.article__figure_border {
+  border: 1px solid #000;
+}
+
+.article__figcaption {
+  margin-bottom: 30px;
+}
+.article__figcaption_grey {
+  padding: 15px 30px;
+  color: #5e5e5e;
 }

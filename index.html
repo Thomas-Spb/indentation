@@ -14,17 +14,17 @@
 
 <body>
     <article class="article">
-        <div class="article__container">
+        <section class="article__container section">
             <h1 class="article__title article__title_main">Отступы в вёрстке: margin и padding</h1>
             <p class="article__desc">В этой статье я рассмотрю самые популярные "стандартные" решения для сохранения
                 смысла и хорошей читаемости вашего кода. Если точнее — речь пойдет об основных правилах организации
                 отступов. Они сильно влияют на общую функциональность кода и, если всё сделано верно, позволяют легко
                 вносить изменения в любую его часть. При этом другие части кода продолжат нормально работать.</p>
-            <p class="article__desc article__desc_last">Как это часто бывает, знание базовых принципов поможет проявить
+            <p class="article__desc">Как это часто бывает, знание базовых принципов поможет проявить
                 гибкость и выйти за
                 их пределы. Эти знания особенно важны для начинающих, но также будут полезным напоминанием и для более
                 опытных верстальщиков. Итак, поговорим о фундаментальных основах работы с отступами в вёрстке.</p>
-        </div>
+        </section>
 
         <div class="article__container navigation">
             <nav class="navigation__container">
@@ -69,7 +69,7 @@
             </div>
 
             <div class="article__wrapper">
-                <div class="article__inner article__inner_more">
+                <div class="article__inner article__image_size_big">
                     <p class="article__desc">Отступ внутри блока сверху или слева реализуется через
                         <span class="article__italic">padding-top</span> и
                         <span class="article__italic">padding-left</span>
@@ -81,7 +81,7 @@
                         меняться только под
                         воздействием свойств других блоков или свойств родителя.</p>
                 </div>
-                <img class="article__image article__image_small" src="./img/2.jpg" alt="Пример margin">
+                <img class="article__image article__image_size_small" src="./img/2.jpg" alt="Пример margin">
             </div>
         </section>
 
@@ -98,9 +98,9 @@
 
             <p class="article__desc">Отступ делают за счёт соседних элементов, а не дочерних:</p>
 
-            <figure class="article__figure">
-                <img class="mb-30" src="./img/5.jpg" alt="Пример отступов">
-                <figcaption class="article__figcaption">
+            <figure class="article__figure article__figure_border">
+                <img src="./img/5.jpg" alt="Пример отступов">
+                <figcaption class="article__figcaption_grey">
                     <span class="article__bold">ВАЖНО</span>: здесь <span class="article__italic">.list-item</span> —
                     последний
                     возможный элемент в котором мы задаём отступ, чтобы
@@ -118,26 +118,34 @@
             <p class="article__desc">Предыдущий пример был достаточно простым, но бывает вложенность значительно
                 больше.</p>
 
-            <img class="image" src="./img/6.jpg" alt="Пример отступов">
-
-            <p class="article__desc">В случае с заголовком, если ему необходим отступ сверху, последним элементом
-                будет <span class="article__italic">section</span>. Именно для него задается <span
-                    class="article__italic">padding-top</span>, а не <span class="article__italic">div</span> с классом
-                <span class="article__italic">container</span>.
-                Свойства margin, которые
-                стоят по умолчанию необходимо обнулить.
-            </p>
-
-            <img class="image" src="./img/7.jpg" alt="Пример отступов">
-
-            <p class="article__desc">Это необходимо для более простого поиска отступов в будущем — для вас или
-                того,
-                кто будет верстать после вас. Кроме того, возможны серьёзные проблемы при динамическом дублировании или
-                выводе вёрстки с нестандартной структурой отступов.</p>
+            <figure class="article__figure">
+                <img class=" image" src="./img/6.jpg" alt="Пример отступов">
+                <figcaption>
+                    <p class="article__desc">В случае с заголовком, если ему необходим отступ сверху, последним
+                        элементом
+                        будет <span class="article__italic">section</span>. Именно для него задается <span
+                            class="article__italic">padding-top</span>, а не <span class="article__italic">div</span> с
+                        классом
+                        <span class="article__italic">container</span>.
+                        Свойства margin, которые
+                        стоят по умолчанию необходимо обнулить.
+                    </p>
+                </figcaption>
+            </figure>
+            <figure class="article__figure">
+                <img class="image" src="./img/7.jpg" alt="Пример отступов">
+                <figcaption>
+                    <p class="article__desc">Это необходимо для более простого поиска отступов в будущем — для вас или
+                        того,
+                        кто будет верстать после вас. Кроме того, возможны серьёзные проблемы при динамическом
+                        дублировании или
+                        выводе вёрстки с нестандартной структурой отступов.</p>
+                </figcaption>
+            </figure>
         </section>
 
         <section class="article__container section" id="last_null">
-            <h2 class="article__header">
+            <h2 class="article__title">
                 Для последнего элемента группы отступ всегда обнуляется
             </h2>
 
@@ -145,42 +153,51 @@
             <p class="article__desc">Между рецептами расстояние одинаковое. Можно заметить, что и до следующего
                 блока
                 расстояние такое же.</p>
-
-            <img class="image" src="./img/8.jpg" alt="Пример обнуления отступов">
-
-            <p class="article__desc">В соответствии со вторым принципом: последний <span
-                    class="article__italic">margin</span> обнуляется, а нижний
-                отступ
-                задаётся через <span class="article__italic">padding</span> для <span
-                    class="article__italic">section</span>.
-                Я чаще всего задаю padding для секции с обоих сторон, если
-                расстояние
-                между секциями 100px задаю секциям <span class="article__italic">padding-top:50px</span> и <span
-                    class="article__italic">padding-bottom:50px</span>.</p>
-
+            <figure class="article__figure">
+                <img class="image" src="./img/8.jpg" alt="Пример обнуления отступов">
+                <figcaption>
+                    <p class="article__desc">В соответствии со вторым принципом: последний <span
+                            class="article__italic">margin</span> обнуляется, а нижний
+                        отступ
+                        задаётся через <span class="article__italic">padding</span> для <span
+                            class="article__italic">section</span>.
+                        Я чаще всего задаю padding для секции с обоих сторон, если
+                        расстояние
+                        между секциями 100px задаю секциям <span class="article__italic">padding-top:50px</span> и <span
+                            class="article__italic">padding-bottom:50px</span>.</p>
+                </figcaption>
+            </figure>
             <img class="image" src="./img/9.jpg" alt="Пример отступов">
+            <figure class="article__figure">
+                <img class="image" src="./img/10.jpg" alt="Пример отступов">
 
-            <img class="image" src="./img/10.jpg" alt="Пример отступов">
-
-
-            <p class="article__desc">Для большего понимания рассмотрим другой пример, который часто встречается на
-                практике:</p>
-
+                <figcaption>
+                    <p class="article__desc">Для большего понимания рассмотрим другой пример, который часто встречается
+                        на
+                        практике:</p>
+                </figcaption>
+            </figure>
             <img class="image" src="./img/12.jpg" alt="Пример отступов">
             <img class="image" src="./img/13.jpg" alt="Пример отступов">
-
-            <p class="article__paragraph">Здесь нас интересует отступ между пунктами меню и списком с кнопкой поиска.
-                Отступы между пунктами меню задаются так:</p>
-
-            <img class="image" src="./img/14.jpg" alt="Пример отступов">
-
-            <p class="article__desc">Советую использовать псевдоклассы :last-child чаще других, например так:</p>
-
-            <img class="image" src="./img/15.jpg" alt="Пример отступов">
+            <figure class="article__figure">
+                <figcaption class="article__figcaption">
+                    <p class="article__paragraph">Здесь нас интересует отступ между пунктами меню и списком с кнопкой
+                        поиска.
+                        Отступы между пунктами меню задаются так:</p>
+                </figcaption>
+                <img class="image" src="./img/14.jpg" alt="Пример отступов">
+            </figure>
+            <figure class="article__figure">
+                <figcaption class="article__figcaption">
+                    <p class="article__desc">Советую использовать псевдоклассы :last-child чаще других, например так:
+                    </p>
+                </figcaption>
+                <img class="image" src="./img/15.jpg" alt="Пример отступов">
+            </figure>
         </section>
 
 
-        <section class="article__container">
+        <section class="article__container section">
             <div class="summary">
                 <h2 class="summary__header">
                     Подытожим:
