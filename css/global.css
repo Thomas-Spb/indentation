@@ -76,7 +76,7 @@ iframe {
   transform: scale(0);
 }
 
-.section {
+.section:not(:last-child) {
   margin-bottom: 50px;
 }
 
